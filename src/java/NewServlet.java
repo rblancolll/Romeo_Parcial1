@@ -31,6 +31,8 @@ public class NewServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter respuesta = response.getWriter()) {
+            
+            
             libro=new Libro(
                 request.getParameter("codigo"),
                 request.getParameter("nombrelibro"),
@@ -55,7 +57,7 @@ public class NewServlet extends HttpServlet {
             respuesta.println("</head>");
             respuesta.println("<body>");           
             respuesta.println("<div class='container'>");
-             respuesta.println("<br><h1>Gracias por registrarse </h1><br>");  
+             respuesta.println("<br><h1>Gracias por registrar su Libro </h1><br>");  
             respuesta.println("<form name='nombreForm'>");
             respuesta.println("<div class='container-lg d-flex'> <a href='index.html' class=\"btn btn-success ml-auto\">Registrar Nuevo</a></div><br>");
             respuesta.println("<table class=\"table table-hover table-striped\">");   
